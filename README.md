@@ -12,8 +12,6 @@ You are not allowed to collaborate during the Sprint Challenge. However, you are
 
 You have three hours to complete this challenge. Plan your time accordingly.
 
-TO DO
-
 ## Commits
 
 Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons and your project manager.
@@ -32,10 +30,10 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 ## Project Set Up
 
-- [ ] fork and clone this repository.
-- [ ] **CD into the folder** where you downloaded the repository.
-- [ ] run `yarn` or `npm i` to download all dependencies.
-- [ ] type `yarn test` or `npm test` to run the tests. The `test` script is already configured.
+- [X] fork and clone this repository.
+- [X] **CD into the folder** where you downloaded the repository.
+- [X] run `yarn` or `npm i` to download all dependencies.
+- [X] type `yarn test` or `npm test` to run the tests. The `test` script is already configured.
 
 ## Minimum Viable Product
 
