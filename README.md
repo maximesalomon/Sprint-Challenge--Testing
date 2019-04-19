@@ -49,16 +49,16 @@ The 3 types of automated tests are Unit Testing, Functional Testing, and Integra
 
 Your finished project must include all of the following requirements:
 
-- [ ] use `jest` and `supertest` to write the tests.
-- [ ] Write the **tests BEFORE** writing the route handlers.
-- [ ] Your API must be have `POST` and `GET` endpoints for `/games`.
-- [ ] Write a **minimum** of three tests per endpoint.
+- [X] use `jest` and `supertest` to write the tests.
+- [X] Write the **tests BEFORE** writing the route handlers.
+- [X] Your API must be have `POST` and `GET` endpoints for `/games`.
+- [X] Write a **minimum** of three tests per endpoint.
 
 Below is a product specification covering the requirements for your endpoints.
 
 ### POST /games
 
-- [ ] The `POST /games` endpoint should take in an object that looks like this
+- [X] The `POST /games` endpoint should take in an object that looks like this
 
   ```js
   {
@@ -68,7 +68,7 @@ Below is a product specification covering the requirements for your endpoints.
   }
   ```
 
-- [ ] In the route handler, validate that the required fields are included inside the body. If the information is incomplete, return a `422` status code.
+- [X] In the route handler, validate that the required fields are included inside the body. If the information is incomplete, return a `422` status code.
 - [ ] Write tests to verify that the endpoint returns the correct HTTP status code when receiving correct and incorrect game data.
 
 ### GET /games
