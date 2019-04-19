@@ -2,9 +2,8 @@ const request = require("supertest");
 const server = require("./server");
 const db = require("../data/dbConfig");
 
-
 describe("route handlers", () => {
-
+    
   afterEach(async () => {
     await db("games").truncate();
     await db.seed.run();
@@ -33,6 +32,37 @@ describe("route handlers", () => {
       const games = res.body.games;
       expect(games.length).toBeFalsy();
     });
-    
+  });
+
+  describe("POST /games", () => {
+    it("recieves a 201 status", async () => {
+      const game = { title: "Battlefield V", genre: "fps", releaseYear: 2018 };
+      const body = { game };
+      const res = await request(server)
+        .post("/games")
+        .send(body);
+
+      expect(res.status).toBe(201);
+    });
+
+    it("recieves a 422 status for incomplete game data", async () => {
+      const game = { title: "Far Cry New Dawns", genre: "", releaseYear: 2019 };
+      const body = { game };
+      const res = await request(server)
+        .post("/games")
+        .send(body);
+
+      expect(res.status).toBe(422);
+    });
+
+    it("response is in json format", async () => {
+      const game = { title: "Battlefield V", genre: "fps", releaseYear: 2018 };
+      const body = { game };
+      const res = await request(server)
+        .post("/games")
+        .send(body);
+
+      expect(res.type).toMatch(/json/i);
+    });
   });
 });
